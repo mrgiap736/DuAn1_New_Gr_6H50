@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PRL.User_Interfaces
+{
+    public partial class TaoVe : Form
+    {
+        public TaoVe()
+        {
+            InitializeComponent();
+        }
+        public Panel taoVe()
+        {
+            return Panel_taoVe;
+        }
+    }
+}
