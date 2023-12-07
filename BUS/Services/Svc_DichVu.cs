@@ -1,6 +1,6 @@
-﻿using BUS.IServices;
-using BUS.Repositories;
+﻿using BUS.Repositories;
 using DAL.DomainClass;
+using DAL.IRepos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

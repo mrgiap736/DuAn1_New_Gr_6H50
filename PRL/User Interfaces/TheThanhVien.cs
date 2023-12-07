@@ -48,8 +48,8 @@ namespace PRL
                 MessageBox.Show("Chỉ được điền số vào trường SĐT và điểm", "NO...........", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var TTVMoi = new DAL1.DomainClass.TheThanhVien();
-            TTVMoi.SDTKhachHang = Txt_Phone.Text;
+            var TTVMoi = new DAL.DomainClass.TheThanhVien();
+            TTVMoi.SdtkhachHang = Txt_Phone.Text;
             TTVMoi.LoaiThanhVien = Combo_Tier.Text;
             TTVMoi.NgayHieuLuc = DateTime.Parse(Txt_Available.Text);
             TTVMoi.NgayHetHan = DateTime.Parse(Txt_DieDate.Text);
@@ -147,8 +147,8 @@ namespace PRL
                 MessageBox.Show("Chỉ được điền số vào trường SĐT và điểm", "NO...........", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var TTVCapNhat = new DAL1.DomainClass.TheThanhVien();
-            TTVCapNhat.SDTKhachHang = Txt_Phone.Text;
+            var TTVCapNhat = new DAL.DomainClass.TheThanhVien();
+            TTVCapNhat.SdtkhachHang = Txt_Phone.Text;
             TTVCapNhat.LoaiThanhVien = Combo_Tier.Text;
             TTVCapNhat.NgayHieuLuc = DateTime.Parse(Txt_Available.Text);
             TTVCapNhat.NgayHetHan = DateTime.Parse(Txt_DieDate.Text);
@@ -161,8 +161,8 @@ namespace PRL
 
         private void BTN_Delete_Click(object sender, EventArgs e)
         { 
-            var TTVXoa = new DAL1.DomainClass.TheThanhVien();
-            TTVXoa.SDTKhachHang = Txt_Phone.Text;
+            var TTVXoa = new DAL.DomainClass.TheThanhVien();
+            TTVXoa.SdtkhachHang = Txt_Phone.Text;
             TTVXoa.LoaiThanhVien = Combo_Tier.Text;
             TTVXoa.NgayHieuLuc = DateTime.Parse(Txt_Available.Text);
             TTVXoa.NgayHetHan = DateTime.Parse(Txt_DieDate.Text);
@@ -170,7 +170,7 @@ namespace PRL
             DialogResult Confirmation = MessageBox.Show("Do you want to delete????", "O H YEA  DELET TIEM", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Confirmation == DialogResult.Yes)
             {
-                if (TTVXoa.SDTKhachHang == Txt_Phone.Text &&
+                if (TTVXoa.SdtkhachHang == Txt_Phone.Text &&
                 TTVXoa.LoaiThanhVien == Combo_Tier.Text &&
                 TTVXoa.NgayHieuLuc == DateTime.Parse(Txt_Available.Text) &&
                 TTVXoa.NgayHetHan == DateTime.Parse(Txt_DieDate.Text) &&

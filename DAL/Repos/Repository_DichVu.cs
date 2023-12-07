@@ -1,6 +1,6 @@
 ﻿using DAL.Context;
 using DAL.DomainClass;
-using BUS.IServices;
+using DAL.IRepos;
 using Microsoft.EntityFrameworkCore;
 
 namespace BUS.Repositories

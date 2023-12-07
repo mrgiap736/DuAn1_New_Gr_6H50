@@ -1,6 +1,6 @@
-﻿using BUS.IServices;
-using DAL.Context;
+﻿using DAL.Context;
 using DAL.DomainClass;
+using DAL.IRepos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
