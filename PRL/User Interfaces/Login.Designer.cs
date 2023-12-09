@@ -136,6 +136,7 @@
             ClientSize = new Size(406, 396);
             Controls.Add(panel_login);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             KeyDown += Login_KeyDown;
             panel_login.ResumeLayout(false);
