@@ -10,5 +10,6 @@ namespace BUS.IServices
     public interface IPhimServices
     {
         public List<Phim> GetAllPhim();
+        public List<Ghe> GetAllGhe();
     }
 }

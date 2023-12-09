@@ -62,25 +62,25 @@
             Panel_Phim.Controls.Add(label3);
             Panel_Phim.Location = new Point(0, 0);
             Panel_Phim.Name = "Panel_Phim";
-            Panel_Phim.Size = new Size(913, 1508);
+            Panel_Phim.Size = new Size(916, 1508);
             Panel_Phim.TabIndex = 3;
             // 
             // FLPanel_DSphim
             // 
             FLPanel_DSphim.BackColor = Color.Firebrick;
-            FLPanel_DSphim.Location = new Point(23, 49);
+            FLPanel_DSphim.Location = new Point(0, 49);
             FLPanel_DSphim.Name = "FLPanel_DSphim";
-            FLPanel_DSphim.Size = new Size(875, 1420);
+            FLPanel_DSphim.Size = new Size(913, 1420);
             FLPanel_DSphim.TabIndex = 51;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(23, 14);
+            label3.Location = new Point(11, 9);
             label3.Name = "label3";
-            label3.Size = new Size(68, 32);
+            label3.Size = new Size(75, 35);
             label3.TabIndex = 50;
             label3.Text = "Phim";
             // 

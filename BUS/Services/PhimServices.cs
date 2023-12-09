@@ -17,6 +17,12 @@ namespace BUS.Services
         {
                 
         }
+
+        public List<Ghe> GetAllGhe()
+        {
+            return rp.GetAllGhe();
+        }
+
         public List<Phim> GetAllPhim()
         {
             return rp.GetAll();

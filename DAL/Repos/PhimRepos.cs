@@ -21,5 +21,10 @@ namespace DAL.Repos
         {
             return db.Phims.ToList();
         }
+
+        public List<Ghe> GetAllGhe()
+        {
+            return db.Ghes.ToList();
+        }
     }
 }

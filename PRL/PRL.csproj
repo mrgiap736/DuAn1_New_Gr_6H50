@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\anhphim.png" />
+    <Resource Include="Resources\anhphim.png" />
   </ItemGroup>
 
   <ItemGroup>

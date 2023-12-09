@@ -12,13 +12,24 @@ namespace PRL.User_Interfaces
 {
     public partial class TaoVe : Form
     {
-        public TaoVe()
+        private string maghe { get; set; }
+        public TaoVe(string maghe)
         {
             InitializeComponent();
+            this.maghe = maghe;
+        }
+        public TaoVe()
+        {
+           
         }
         public Panel taoVe()
         {
             return Panel_taoVe;
+        }
+
+        private void TaoVe_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

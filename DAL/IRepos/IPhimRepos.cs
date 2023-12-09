@@ -10,5 +10,6 @@ namespace DAL.IRepos
     public interface IPhimRepos
     {
         public List<Phim> GetAll();
+        public List<Ghe> GetAllGhe();
     }
 }

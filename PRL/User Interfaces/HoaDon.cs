@@ -15,6 +15,11 @@ namespace PRL.User_Interfaces
 
         private Control[] controls;
 
+        public Panel PNchinh()
+        {
+            return panel2;
+        }
+
         #region lấy đối tượng các form
         Vouchers vc = new Vouchers()
         {
