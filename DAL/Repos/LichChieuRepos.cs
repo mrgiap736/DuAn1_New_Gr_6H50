@@ -19,18 +19,36 @@ namespace DAL.Repos
         }
         public bool Create(LichChieu lc)
         {
-            db.LichChieus.Add(lc);
-            db.SaveChanges();
-            return true;
+            try
+            {
+                db.LichChieus.Add(lc);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                return false; 
+            }
+
         }
 
         public bool Delete(string id)
         {
-            var lc = db.LichChieus.Find(id);
+            try
+            {
+                var lc = db.LichChieus.Find(id);
+
+                db.LichChieus.Remove(lc);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                return false;
+            }
             
-            db.LichChieus.Remove(lc);
-            db.SaveChanges(); 
-            return true;
         }
 
         public List<LichChieu> GetAll()
@@ -48,9 +66,26 @@ namespace DAL.Repos
             return db.PhongChieus.Select(x => x.MaPhongChieu).ToList();
         }
 
-        public bool Update(LichChieu lc)
+        public bool Update(string malc, string maphim, int maphongchieu, DateTime thoigianchieu)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var lc = db.LichChieus.Find(malc);
+
+                lc.MaPhim = maphim;
+                lc.MaPhongChieu = maphongchieu;
+                lc.ThoiGianChieu = thoigianchieu;
+
+                db.LichChieus.Update(lc);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                return false;
+            }
+            
         }
     }
 }

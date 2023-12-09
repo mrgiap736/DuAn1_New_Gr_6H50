@@ -11,7 +11,7 @@ namespace BUS.IServices
     {
         public List<LichChieu> GetAllLichChieu();
         public bool CreateLichChieu(LichChieu lc);
-        public bool UpdateLichChieu(LichChieu lc);
+        public bool UpdateLichChieu(string malc, string maphim, int maphongchieu, DateTime thoigianchieu);
         public bool DeleteLichChieu(string id);
         public List<string> GetNamePhim();
         public List<int> GetMaPhong();

@@ -158,5 +158,17 @@ namespace PRL.User_Interfaces
         {
             LoadLichChieu();
         }
+
+        private void btn_SuaLich_Click(object sender, EventArgs e)
+        {
+            string maphim = cbo_maphim.SelectedItem.ToString();
+            string tg = txt_ngaychieu.Text + " " + txt_giochieu.Text;
+            DateTime thoigianchieu = Convert.ToDateTime(tg);
+            int maphongchieu = Convert.ToInt32(cbo_phongchieu.SelectedItem);
+
+            lcsv.UpdateLichChieu(malc, maphim, maphongchieu, thoigianchieu);
+
+            LoadLichChieu();
+        }
     }
 }

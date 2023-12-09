@@ -43,9 +43,10 @@ namespace BUS.Services
             return rp.GetAllP();
         }
 
-        public bool UpdateLichChieu(LichChieu lc)
+        public bool UpdateLichChieu(string malc, string maphim, int maphongchieu, DateTime thoigianchieu)
         {
-            throw new NotImplementedException();
+            rp.Update(malc, maphim, maphongchieu, thoigianchieu);
+            return true;
         }
     }
 }

@@ -126,6 +126,7 @@
             btn_SuaLich.TabIndex = 57;
             btn_SuaLich.Text = "Sửa Lịch Chiếu";
             btn_SuaLich.UseVisualStyleBackColor = false;
+            btn_SuaLich.Click += btn_SuaLich_Click;
             // 
             // btn_UpdateTT
             // 

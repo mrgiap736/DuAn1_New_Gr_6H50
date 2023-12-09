@@ -11,7 +11,7 @@ namespace DAL.IRepos
     {
         public List<LichChieu> GetAll();
         public bool Create(LichChieu lc);
-        public bool Update(LichChieu lc);
+        public bool Update(string malc, string maphim, int maphongchieu, DateTime thoigianchieu);
         public bool Delete(string id);
         public List<string> GetAllP();
         public List<int> GetAllPhong();
