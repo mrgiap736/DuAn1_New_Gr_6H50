@@ -327,6 +327,7 @@
             Controls.Add(Panel_taoVe);
             Name = "TaoVe";
             Text = "TaoVe";
+            Load += TaoVe_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -183,9 +183,14 @@ namespace PRL.User_Interfaces
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Tổng bill: {lb_TongGiaTien.Text   }");
+            MessageBox.Show($"Tổng bill: {lb_TongGiaTien.Text}");
 
             dtg_ChonDV.Rows.Clear();
+        }
+
+        private void YeuCauDichVu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

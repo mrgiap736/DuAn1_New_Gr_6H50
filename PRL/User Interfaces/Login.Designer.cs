@@ -136,7 +136,9 @@
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             KeyDown += Login_KeyDown;
             panel_login.ResumeLayout(false);
             panel_login.PerformLayout();

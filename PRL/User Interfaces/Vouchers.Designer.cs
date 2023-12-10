@@ -193,6 +193,7 @@
             btn_LamMoi.TabIndex = 53;
             btn_LamMoi.Text = "Làm Mới";
             btn_LamMoi.UseVisualStyleBackColor = false;
+            btn_LamMoi.Click += btn_LamMoi_Click;
             // 
             // btn_TaoVoucher
             // 
@@ -206,6 +207,7 @@
             btn_TaoVoucher.TabIndex = 53;
             btn_TaoVoucher.Text = "Tạo Voucher";
             btn_TaoVoucher.UseVisualStyleBackColor = false;
+            btn_TaoVoucher.Click += btn_TaoVoucher_Click;
             // 
             // dtgView
             // 
@@ -219,6 +221,7 @@
             dtgView.RowTemplate.Height = 29;
             dtgView.Size = new Size(917, 251);
             dtgView.TabIndex = 52;
+            dtgView.CellClick += dtgView_CellClick;
             // 
             // label1
             // 
@@ -312,6 +315,7 @@
             Controls.Add(panel_Voucher);
             Name = "Vouchers";
             Text = "Vouchers";
+            Load += Vouchers_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

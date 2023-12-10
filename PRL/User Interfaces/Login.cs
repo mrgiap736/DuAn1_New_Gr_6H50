@@ -15,8 +15,8 @@ namespace PRL.User_Interfaces
         public Login()
         {
             InitializeComponent();
-            txtTK.Padding = new Padding(3,3,3,3);
-            txtMK.Padding = new Padding(3,3,3,3);
+            txtTK.Padding = new Padding(3, 3, 3, 3);
+            txtMK.Padding = new Padding(3, 3, 3, 3);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace PRL.User_Interfaces
         {
             if (e.KeyCode == Keys.Enter)
             {
-              e.SuppressKeyPress = true;
+                e.SuppressKeyPress = true;
             }
         }
 
@@ -73,18 +73,23 @@ namespace PRL.User_Interfaces
         {
             if (e.KeyCode == Keys.Enter)
             {
-               e.SuppressKeyPress = true;
+                e.SuppressKeyPress = true;
             }
         }
 
 
         private void Login_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true;
                 LoginFun();
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
