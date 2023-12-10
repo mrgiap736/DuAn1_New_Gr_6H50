@@ -365,7 +365,13 @@ namespace PRL.User_Interfaces
         }
         #endregion
 
-
-        //
+        private void panel_DangXuat_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất không?","Đăng xuất",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
