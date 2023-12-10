@@ -52,10 +52,12 @@
             panel_Thongke.Controls.Add(label3);
             panel_Thongke.Controls.Add(dgvThongKe);
             panel_Thongke.Location = new Point(2, 1);
+            panel_Thongke.Margin = new Padding(3, 2, 3, 2);
             panel_Thongke.Name = "panel_Thongke";
-            panel_Thongke.Size = new Size(923, 940);
+            panel_Thongke.Size = new Size(808, 752);
             panel_Thongke.TabIndex = 1;
             // 
+
             // label4
             // 
             label4.AutoSize = true;
@@ -121,6 +123,8 @@
             txtSoVeBan.Name = "txtSoVeBan";
             txtSoVeBan.Size = new Size(538, 46);
             txtSoVeBan.TabIndex = 54;
+=======
+
             // 
             // label3
             // 
@@ -128,14 +132,18 @@
             label3.BackColor = Color.Gold;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
+
             label3.Location = new Point(225, 8);
+=======
+
             label3.Name = "label3";
-            label3.Size = new Size(491, 32);
+            label3.Size = new Size(385, 25);
             label3.TabIndex = 49;
             label3.Text = "Doanh Thu Trong Ngày Và  Số Lượng Vé Bán";
             // 
             // dgvThongKe
             // 
+
             dgvThongKe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThongKe.BackgroundColor = Color.White;
             dgvThongKe.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -146,14 +154,17 @@
             dgvThongKe.Size = new Size(917, 418);
             dgvThongKe.TabIndex = 0;
             dgvThongKe.CellClick += dgvThongKe_CellClick;
+=======
+
             // 
             // ThongKe
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Firebrick;
-            ClientSize = new Size(931, 714);
+            ClientSize = new Size(815, 571);
             Controls.Add(panel_Thongke);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ThongKe";
             Text = "ThongKe";
             Load += ThongKe_Load;

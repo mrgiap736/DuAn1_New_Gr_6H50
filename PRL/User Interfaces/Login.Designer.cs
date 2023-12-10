@@ -51,18 +51,17 @@
             panel_login.Controls.Add(txtTK);
             panel_login.Controls.Add(label3);
             panel_login.Location = new Point(0, 0);
-            panel_login.Margin = new Padding(3, 4, 3, 4);
             panel_login.Name = "panel_login";
-            panel_login.Size = new Size(406, 400);
+            panel_login.Size = new Size(355, 320);
             panel_login.TabIndex = 1;
             // 
             // btnLogin
             // 
             btnLogin.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogin.Location = new Point(130, 276);
+            btnLogin.Location = new Point(114, 221);
             btnLogin.Margin = new Padding(2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(145, 42);
+            btnLogin.Size = new Size(127, 34);
             btnLogin.TabIndex = 0;
             btnLogin.Text = "Đăng Nhập";
             btnLogin.UseVisualStyleBackColor = true;
@@ -72,10 +71,9 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(217, 217, 217);
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.Location = new Point(317, 196);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(277, 157);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(37, 35);
+            pictureBox2.Size = new Size(32, 28);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 58;
             pictureBox2.TabStop = false;
@@ -83,24 +81,23 @@
             // txtMK
             // 
             txtMK.BackColor = Color.FromArgb(217, 217, 217);
-            txtMK.Font = new Font("Times New Roman", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMK.ForeColor = SystemColors.ActiveCaptionText;
-            txtMK.Location = new Point(57, 193);
-            txtMK.Margin = new Padding(4, 4, 5, 4);
+            txtMK.Font = new Font("Cascadia Mono SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtMK.ForeColor = Color.Black;
+            txtMK.Location = new Point(50, 154);
+            txtMK.Margin = new Padding(4, 3, 4, 3);
             txtMK.Name = "txtMK";
             txtMK.PasswordChar = '*';
             txtMK.PlaceholderText = "Mật khẩu";
-            txtMK.Size = new Size(301, 46);
+            txtMK.Size = new Size(264, 39);
             txtMK.TabIndex = 57;
             txtMK.KeyDown += txtMK_KeyDown;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.FromArgb(217, 217, 217);
-            pictureBox1.Location = new Point(317, 114);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(277, 91);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(37, 34);
+            pictureBox1.Size = new Size(32, 27);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 56;
             pictureBox1.TabStop = false;
@@ -108,13 +105,13 @@
             // txtTK
             // 
             txtTK.BackColor = Color.FromArgb(217, 217, 217);
-            txtTK.Font = new Font("Times New Roman", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTK.ForeColor = SystemColors.ActiveCaptionText;
-            txtTK.Location = new Point(57, 109);
-            txtTK.Margin = new Padding(4, 4, 5, 4);
+            txtTK.Font = new Font("Cascadia Mono SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtTK.ForeColor = Color.Black;
+            txtTK.Location = new Point(50, 87);
+            txtTK.Margin = new Padding(4, 3, 4, 3);
             txtTK.Name = "txtTK";
             txtTK.PlaceholderText = "Tài khoản";
-            txtTK.Size = new Size(301, 46);
+            txtTK.Size = new Size(264, 39);
             txtTK.TabIndex = 55;
             txtTK.KeyDown += txtTK_KeyDown;
             // 
@@ -123,20 +120,25 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(88, 29);
+            label3.Location = new Point(77, 23);
             label3.Name = "label3";
-            label3.Size = new Size(249, 57);
+            label3.Size = new Size(200, 46);
             label3.TabIndex = 52;
             label3.Text = "Đăng Nhập";
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(406, 396);
+            ClientSize = new Size(355, 317);
             Controls.Add(panel_login);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             KeyDown += Login_KeyDown;
             panel_login.ResumeLayout(false);
             panel_login.PerformLayout();

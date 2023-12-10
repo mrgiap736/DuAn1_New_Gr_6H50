@@ -136,6 +136,7 @@
             Controls.Add(panel_YeuCauDichVu);
             Name = "YeuCauDichVu";
             Text = "YeuCauDichVu";
+            Load += YeuCauDichVu_Load;
             panel_YeuCauDichVu.ResumeLayout(false);
             panel_YeuCauDichVu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtg_ChonDV).EndInit();
