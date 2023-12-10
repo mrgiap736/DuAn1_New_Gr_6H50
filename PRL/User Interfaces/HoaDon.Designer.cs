@@ -933,6 +933,7 @@
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "HoaDon";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HoaDon";
             Load += HoaDon_Load;
             panel_DangXuat.ResumeLayout(false);

@@ -1,6 +1,7 @@
 ﻿using DAL.Context;
 using DAL.DomainClass;
 using DAL.IRepos;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace DAL.Repos
         }
         public List<Phim> GetAll()
         {
-            return db.Phims.ToList();
+            return db.Phims.Include("MaTheLoaiNavigation").ToList();
         }
 
         public List<Ghe> GetAllGhe()

@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox6 = new TextBox();
+            txt_MaPhim = new TextBox();
             pictureBox3 = new PictureBox();
             textBox7 = new TextBox();
-            textBox4 = new TextBox();
+            txt_MaPhong = new TextBox();
             pictureBox2 = new PictureBox();
             textBox5 = new TextBox();
-            textBox2 = new TextBox();
+            txt_Lich = new TextBox();
             pictureBox1 = new PictureBox();
-            Txt_Film = new TextBox();
+            txt_Mave = new TextBox();
             textBox3 = new TextBox();
             pictureBox4 = new PictureBox();
             textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
-            comboBox1 = new ComboBox();
-            button2 = new Button();
-            button1 = new Button();
+            dtg_HienThiDSVe = new DataGridView();
+            cbo_GiaVe = new ComboBox();
+            btn_LamMoi = new Button();
+            btn_TaoVe = new Button();
             label2 = new Label();
             label1 = new Label();
             label14 = new Label();
@@ -55,21 +55,22 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtg_HienThiDSVe).BeginInit();
             Panel_taoVe.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox6
+            // txt_MaPhim
             // 
-            textBox6.BackColor = Color.FromArgb(255, 138, 0);
-            textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.ForeColor = Color.Black;
-            textBox6.Location = new Point(336, 518);
-            textBox6.Margin = new Padding(3, 4, 3, 4);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(282, 27);
-            textBox6.TabIndex = 74;
+            txt_MaPhim.BackColor = Color.FromArgb(255, 138, 0);
+            txt_MaPhim.BorderStyle = BorderStyle.None;
+            txt_MaPhim.Enabled = false;
+            txt_MaPhim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_MaPhim.ForeColor = Color.Black;
+            txt_MaPhim.Location = new Point(336, 518);
+            txt_MaPhim.Margin = new Padding(3, 4, 3, 4);
+            txt_MaPhim.Name = "txt_MaPhim";
+            txt_MaPhim.Size = new Size(282, 27);
+            txt_MaPhim.TabIndex = 74;
             // 
             // pictureBox3
             // 
@@ -90,17 +91,18 @@
             textBox7.Size = new Size(282, 31);
             textBox7.TabIndex = 72;
             // 
-            // textBox4
+            // txt_MaPhong
             // 
-            textBox4.BackColor = Color.FromArgb(255, 138, 0);
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(336, 577);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(282, 27);
-            textBox4.TabIndex = 71;
+            txt_MaPhong.BackColor = Color.FromArgb(255, 138, 0);
+            txt_MaPhong.BorderStyle = BorderStyle.None;
+            txt_MaPhong.Enabled = false;
+            txt_MaPhong.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_MaPhong.ForeColor = Color.Black;
+            txt_MaPhong.Location = new Point(336, 577);
+            txt_MaPhong.Margin = new Padding(3, 4, 3, 4);
+            txt_MaPhong.Name = "txt_MaPhong";
+            txt_MaPhong.Size = new Size(282, 27);
+            txt_MaPhong.TabIndex = 71;
             // 
             // pictureBox2
             // 
@@ -121,17 +123,17 @@
             textBox5.Size = new Size(282, 31);
             textBox5.TabIndex = 69;
             // 
-            // textBox2
+            // txt_Lich
             // 
-            textBox2.BackColor = Color.FromArgb(255, 138, 0);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(336, 456);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(282, 27);
-            textBox2.TabIndex = 65;
+            txt_Lich.BackColor = Color.FromArgb(255, 138, 0);
+            txt_Lich.BorderStyle = BorderStyle.None;
+            txt_Lich.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Lich.ForeColor = Color.Black;
+            txt_Lich.Location = new Point(336, 456);
+            txt_Lich.Margin = new Padding(3, 4, 3, 4);
+            txt_Lich.Name = "txt_Lich";
+            txt_Lich.Size = new Size(282, 27);
+            txt_Lich.TabIndex = 65;
             // 
             // pictureBox1
             // 
@@ -143,17 +145,17 @@
             pictureBox1.TabIndex = 64;
             pictureBox1.TabStop = false;
             // 
-            // Txt_Film
+            // txt_Mave
             // 
-            Txt_Film.BackColor = Color.FromArgb(255, 138, 0);
-            Txt_Film.BorderStyle = BorderStyle.None;
-            Txt_Film.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Txt_Film.ForeColor = Color.Black;
-            Txt_Film.Location = new Point(334, 353);
-            Txt_Film.Margin = new Padding(3, 4, 3, 4);
-            Txt_Film.Name = "Txt_Film";
-            Txt_Film.Size = new Size(282, 27);
-            Txt_Film.TabIndex = 65;
+            txt_Mave.BackColor = Color.FromArgb(255, 138, 0);
+            txt_Mave.BorderStyle = BorderStyle.None;
+            txt_Mave.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Mave.ForeColor = Color.Black;
+            txt_Mave.Location = new Point(334, 353);
+            txt_Mave.Margin = new Padding(3, 4, 3, 4);
+            txt_Mave.Name = "txt_Mave";
+            txt_Mave.Size = new Size(282, 27);
+            txt_Mave.TabIndex = 65;
             // 
             // textBox3
             // 
@@ -169,7 +171,7 @@
             pictureBox4.Location = new Point(334, 350);
             pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(282, 33);
+            pictureBox4.Size = new Size(285, 33);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 64;
             pictureBox4.TabStop = false;
@@ -183,45 +185,48 @@
             textBox1.Size = new Size(282, 31);
             textBox1.TabIndex = 63;
             // 
-            // dataGridView1
+            // dtg_HienThiDSVe
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 50);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(899, 279);
-            dataGridView1.TabIndex = 68;
+            dtg_HienThiDSVe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtg_HienThiDSVe.BackgroundColor = Color.White;
+            dtg_HienThiDSVe.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtg_HienThiDSVe.Location = new Point(10, 43);
+            dtg_HienThiDSVe.Name = "dtg_HienThiDSVe";
+            dtg_HienThiDSVe.RowHeadersWidth = 51;
+            dtg_HienThiDSVe.RowTemplate.Height = 29;
+            dtg_HienThiDSVe.Size = new Size(913, 279);
+            dtg_HienThiDSVe.TabIndex = 68;
             // 
-            // comboBox1
+            // cbo_GiaVe
             // 
-            comboBox1.BackColor = Color.FromArgb(255, 138, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(336, 405);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(283, 28);
-            comboBox1.TabIndex = 67;
+            cbo_GiaVe.BackColor = Color.FromArgb(255, 138, 0);
+            cbo_GiaVe.FormattingEnabled = true;
+            cbo_GiaVe.Items.AddRange(new object[] { "70000" });
+            cbo_GiaVe.Location = new Point(336, 405);
+            cbo_GiaVe.Name = "cbo_GiaVe";
+            cbo_GiaVe.Size = new Size(283, 28);
+            cbo_GiaVe.TabIndex = 67;
             // 
-            // button2
+            // btn_LamMoi
             // 
-            button2.BackColor = Color.FromArgb(112, 88, 61);
-            button2.Location = new Point(692, 466);
-            button2.Name = "button2";
-            button2.Size = new Size(145, 42);
-            button2.TabIndex = 61;
-            button2.Text = "Làm Mới";
-            button2.UseVisualStyleBackColor = false;
+            btn_LamMoi.BackColor = Color.FromArgb(112, 88, 61);
+            btn_LamMoi.Location = new Point(692, 466);
+            btn_LamMoi.Name = "btn_LamMoi";
+            btn_LamMoi.Size = new Size(145, 42);
+            btn_LamMoi.TabIndex = 61;
+            btn_LamMoi.Text = "Làm Mới";
+            btn_LamMoi.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_TaoVe
             // 
-            button1.BackColor = Color.FromArgb(112, 88, 61);
-            button1.Location = new Point(692, 415);
-            button1.Name = "button1";
-            button1.Size = new Size(145, 42);
-            button1.TabIndex = 62;
-            button1.Text = "Tạo vé";
-            button1.UseVisualStyleBackColor = false;
+            btn_TaoVe.BackColor = Color.FromArgb(112, 88, 61);
+            btn_TaoVe.Location = new Point(692, 415);
+            btn_TaoVe.Name = "btn_TaoVe";
+            btn_TaoVe.Size = new Size(145, 42);
+            btn_TaoVe.TabIndex = 62;
+            btn_TaoVe.Text = "Tạo vé";
+            btn_TaoVe.UseVisualStyleBackColor = false;
+            btn_TaoVe.Click += btn_TaoVe_Click;
             // 
             // label2
             // 
@@ -285,28 +290,28 @@
             label7.ForeColor = Color.White;
             label7.Location = new Point(178, 348);
             label7.Name = "label7";
-            label7.Size = new Size(101, 32);
+            label7.Size = new Size(92, 32);
             label7.TabIndex = 60;
-            label7.Text = "Loại vé :";
+            label7.Text = "Mã vé :";
             // 
             // Panel_taoVe
             // 
-            Panel_taoVe.Controls.Add(textBox6);
+            Panel_taoVe.Controls.Add(txt_MaPhim);
             Panel_taoVe.Controls.Add(pictureBox3);
             Panel_taoVe.Controls.Add(textBox7);
-            Panel_taoVe.Controls.Add(textBox4);
+            Panel_taoVe.Controls.Add(txt_MaPhong);
             Panel_taoVe.Controls.Add(pictureBox2);
             Panel_taoVe.Controls.Add(textBox5);
-            Panel_taoVe.Controls.Add(textBox2);
+            Panel_taoVe.Controls.Add(txt_Lich);
             Panel_taoVe.Controls.Add(pictureBox1);
-            Panel_taoVe.Controls.Add(Txt_Film);
+            Panel_taoVe.Controls.Add(txt_Mave);
             Panel_taoVe.Controls.Add(textBox3);
             Panel_taoVe.Controls.Add(pictureBox4);
             Panel_taoVe.Controls.Add(textBox1);
-            Panel_taoVe.Controls.Add(dataGridView1);
-            Panel_taoVe.Controls.Add(comboBox1);
-            Panel_taoVe.Controls.Add(button2);
-            Panel_taoVe.Controls.Add(button1);
+            Panel_taoVe.Controls.Add(dtg_HienThiDSVe);
+            Panel_taoVe.Controls.Add(cbo_GiaVe);
+            Panel_taoVe.Controls.Add(btn_LamMoi);
+            Panel_taoVe.Controls.Add(btn_TaoVe);
             Panel_taoVe.Controls.Add(label2);
             Panel_taoVe.Controls.Add(label1);
             Panel_taoVe.Controls.Add(label14);
@@ -332,7 +337,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtg_HienThiDSVe).EndInit();
             Panel_taoVe.ResumeLayout(false);
             Panel_taoVe.PerformLayout();
             ResumeLayout(false);
@@ -340,22 +345,22 @@
 
         #endregion
 
-        private TextBox textBox6;
+        private TextBox txt_MaPhim;
         private PictureBox pictureBox3;
         private TextBox textBox7;
-        private TextBox textBox4;
+        private TextBox txt_MaPhong;
         private PictureBox pictureBox2;
         private TextBox textBox5;
-        private TextBox textBox2;
+        private TextBox txt_Lich;
         private PictureBox pictureBox1;
-        private TextBox Txt_Film;
+        private TextBox txt_Mave;
         private TextBox textBox3;
         private PictureBox pictureBox4;
         private TextBox textBox1;
-        private DataGridView dataGridView1;
-        private ComboBox comboBox1;
-        private Button button2;
-        private Button button1;
+        private DataGridView dtg_HienThiDSVe;
+        private ComboBox cbo_GiaVe;
+        private Button btn_LamMoi;
+        private Button btn_TaoVe;
         private Label label2;
         private Label label1;
         private Label label14;

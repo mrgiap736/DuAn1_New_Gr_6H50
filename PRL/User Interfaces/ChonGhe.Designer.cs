@@ -106,12 +106,13 @@
             table_LPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             table_LPanel.Location = new Point(266, 24);
             table_LPanel.Name = "table_LPanel";
-            table_LPanel.RowCount = 5;
+            table_LPanel.RowCount = 6;
             table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 16F));
+            table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 16F));
+            table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 16F));
+            table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 16F));
+            table_LPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 16F));
             table_LPanel.Size = new Size(453, 179);
             table_LPanel.TabIndex = 0;
             // 
