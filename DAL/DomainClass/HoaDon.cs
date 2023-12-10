@@ -26,7 +26,7 @@ namespace DAL.DomainClass
         [Column("SDTKhachHang")]
         [StringLength(25)]
         public string SdtkhachHang { get; set; } = null!;
-        [StringLength(10)]
+        [StringLength(25)]
         public string? MaVoucher { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime? ThoiGianXacNhanHoaDon { get; set; }
