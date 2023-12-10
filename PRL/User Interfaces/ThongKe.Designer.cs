@@ -46,18 +46,20 @@
             panel_Thongke.Controls.Add(label3);
             panel_Thongke.Controls.Add(dataGridView1);
             panel_Thongke.Location = new Point(2, 1);
+            panel_Thongke.Margin = new Padding(3, 2, 3, 2);
             panel_Thongke.Name = "panel_Thongke";
-            panel_Thongke.Size = new Size(923, 940);
+            panel_Thongke.Size = new Size(808, 752);
             panel_Thongke.TabIndex = 1;
             // 
             // textBox2
             // 
             textBox2.BackColor = Color.FromArgb(255, 188, 18);
             textBox2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(9, 641);
+            textBox2.Location = new Point(8, 513);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(883, 46);
+            textBox2.Size = new Size(773, 38);
             textBox2.TabIndex = 54;
             textBox2.Text = "Doanh Thu Ngày:";
             // 
@@ -65,10 +67,11 @@
             // 
             textBox1.BackColor = Color.FromArgb(255, 188, 18);
             textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(9, 576);
+            textBox1.Location = new Point(8, 461);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(883, 46);
+            textBox1.Size = new Size(773, 38);
             textBox1.TabIndex = 54;
             textBox1.Text = "Số lượng vé bán trong ngày :";
             // 
@@ -78,9 +81,10 @@
             button1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(733, 84);
+            button1.Location = new Point(641, 67);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(123, 43);
+            button1.Size = new Size(108, 34);
             button1.TabIndex = 50;
             button1.Text = "Biểu đồ";
             button1.TextAlign = ContentAlignment.MiddleRight;
@@ -92,9 +96,9 @@
             label3.BackColor = Color.Gold;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(6, 54);
+            label3.Location = new Point(5, 43);
             label3.Name = "label3";
-            label3.Size = new Size(491, 32);
+            label3.Size = new Size(385, 25);
             label3.TabIndex = 49;
             label3.Text = "Doanh Thu Trong Ngày Và  Số Lượng Vé Bán";
             // 
@@ -102,22 +106,25 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 134);
+            dataGridView1.Location = new Point(3, 107);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(917, 418);
+            dataGridView1.Size = new Size(802, 334);
             dataGridView1.TabIndex = 0;
             // 
             // ThongKe
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Firebrick;
-            ClientSize = new Size(931, 714);
+            ClientSize = new Size(815, 571);
             Controls.Add(panel_Thongke);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ThongKe";
             Text = "ThongKe";
+            Load += ThongKe_Load;
             panel_Thongke.ResumeLayout(false);
             panel_Thongke.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

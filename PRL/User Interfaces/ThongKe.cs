@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +16,21 @@ namespace PRL.User_Interfaces
         public ThongKe()
         {
             InitializeComponent();
+            Get_Information();
         }
         public Panel thongKe()
         {
             return panel_Thongke;
+        }
+
+        private void ThongKe_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Get_Information()
+        {
+            dataGridView1.DataSource = Svc_ThongKe.GetEverything();
         }
     }
 }
