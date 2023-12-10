@@ -1,7 +1,7 @@
 ﻿using BUS.Services;
 
 using DAL.DomainClass;
-=======
+
 
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace PRL.User_Interfaces
             InitializeComponent();
 
             LoadThongKe();
-=======
+
 
         }
 
@@ -58,7 +58,7 @@ namespace PRL.User_Interfaces
             txtDoanhThuDichVuNgay.Text = dgvThongKe.Rows[d].Cells[2].Value.ToString();
             txtDoanhThuPhim.Text = dgvThongKe.Rows[d].Cells[1].Value.ToString();
             txtSoVeBan.Text = dgvThongKe.Rows[d].Cells[3].Value.ToString();
-=======
+
 
         }
     }

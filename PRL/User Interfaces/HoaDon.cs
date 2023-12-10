@@ -203,7 +203,7 @@ namespace PRL.User_Interfaces
             Panel_LichChieu.BackColor = Color.Orange;
             Panel_Phim.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.Orange;
             Panel_Voucher.BackColor = Color.Orange;
             Panel_TheThanhVien.BackColor = Color.Orange;
@@ -218,7 +218,7 @@ namespace PRL.User_Interfaces
             Panel_LichChieu.BackColor = Color.Orange;
             Panel_Phim.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.Orange;
             Panel_Voucher.BackColor = Color.Orange;
             Panel_TheThanhVien.BackColor = Color.Orange;
@@ -233,7 +233,7 @@ namespace PRL.User_Interfaces
             Panel_LichChieu.BackColor = Color.Orange;
             Panel_Phim.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.Orange;
             Panel_Voucher.BackColor = Color.Orange;
             Panel_TheThanhVien.BackColor = Color.Orange;
@@ -243,27 +243,14 @@ namespace PRL.User_Interfaces
             panel_DangXuat.BackColor = Color.Orange;
         }
 
-        private void Panel_TaoVe_MouseDown(object sender, MouseEventArgs e)
-        {
-            Panel_LichChieu.BackColor = Color.Orange;
-            Panel_Phim.BackColor = Color.Orange;
-            Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.FromArgb(190, 0, 0);
-            Panel_TaoHoaDon.BackColor = Color.Orange;
-            Panel_Voucher.BackColor = Color.Orange;
-            Panel_TheThanhVien.BackColor = Color.Orange;
-            Panel_DichVu.BackColor = Color.Orange;
-            Panel_YeucauDichVu.BackColor = Color.Orange;
-            Panel_ThongKe.BackColor = Color.Orange;
-            panel_DangXuat.BackColor = Color.Orange;
-        }
+
 
         private void Panel_TaoHoaDon_MouseDown(object sender, MouseEventArgs e)
         {
             Panel_LichChieu.BackColor = Color.Orange;
             Panel_Phim.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.FromArgb(190, 0, 0);
             Panel_Voucher.BackColor = Color.Orange;
             Panel_TheThanhVien.BackColor = Color.Orange;
@@ -278,7 +265,7 @@ namespace PRL.User_Interfaces
             Panel_LichChieu.BackColor = Color.Orange;
             Panel_Phim.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.Orange;
             Panel_Voucher.BackColor = Color.FromArgb(190, 0, 0);
             Panel_TheThanhVien.BackColor = Color.Orange;
@@ -293,7 +280,7 @@ namespace PRL.User_Interfaces
             Panel_LichChieu.BackColor = Color.Orange;
             Panel_Phim.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.Orange;
             Panel_Voucher.BackColor = Color.Orange;
             Panel_TheThanhVien.BackColor = Color.FromArgb(190, 0, 0);
@@ -308,7 +295,7 @@ namespace PRL.User_Interfaces
             Panel_LichChieu.BackColor = Color.Orange;
             Panel_Phim.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.Orange;
             Panel_Voucher.BackColor = Color.Orange;
             Panel_TheThanhVien.BackColor = Color.Orange;
@@ -323,7 +310,7 @@ namespace PRL.User_Interfaces
             Panel_Phim.BackColor = Color.Orange;
             Panel_LichChieu.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.FromArgb(190, 0, 0);
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.Orange;
             Panel_Voucher.BackColor = Color.Orange;
             Panel_TheThanhVien.BackColor = Color.Orange;
@@ -339,7 +326,7 @@ namespace PRL.User_Interfaces
             Panel_Phim.BackColor = Color.FromArgb(190, 0, 0);
             Panel_LichChieu.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.Orange;
             Panel_Voucher.BackColor = Color.Orange;
             Panel_TheThanhVien.BackColor = Color.Orange;
@@ -354,7 +341,7 @@ namespace PRL.User_Interfaces
             Panel_LichChieu.BackColor = Color.FromArgb(190, 0, 0);
             Panel_Phim.BackColor = Color.Orange;
             Panel_KhachHang.BackColor = Color.Orange;
-            Panel_TaoVe.BackColor = Color.Orange;
+            
             Panel_TaoHoaDon.BackColor = Color.Orange;
             Panel_Voucher.BackColor = Color.Orange;
             Panel_TheThanhVien.BackColor = Color.Orange;
