@@ -136,7 +136,7 @@
             panel_DangXuat.Size = new Size(273, 57);
             panel_DangXuat.TabIndex = 30;
             panel_DangXuat.Click += panel_DangXuat_Click;
-            panel_DangXuat.MouseDown += panel_DangXuat_MouseDown;
+            panel_DangXuat.MouseDown += panel_DangXuat_MouseDown_1;
             // 
             // label12
             // 

@@ -1,5 +1,7 @@
 ﻿using BUS.Services;
 using DAL.DomainClass;
+using Microsoft.Extensions.Logging;
+using System.Text.RegularExpressions;
 
 namespace PRL.User_Interfaces
 {
@@ -8,6 +10,10 @@ namespace PRL.User_Interfaces
         private VoucherServices _services;
         List<DAL.DomainClass.Voucher> _listVc = new();
         private string _IDwhenclick;
+
+        Regex NumbersOnly = new Regex(@"^[0-9]*$");
+        Regex DateTime_Filter = new Regex(@"^(\d{0,2}[/]?\d{1,2})?[/]?\d{1,6}$"); // (dd/mm/yyyy(y))
+
         public Vouchers()
         {
             InitializeComponent();
@@ -27,12 +33,25 @@ namespace PRL.User_Interfaces
 
         private void btn_TaoVoucher_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_maVoucher.Text) ||
+                string.IsNullOrWhiteSpace(txt_loaiVoucher.Text) ||
+                string.IsNullOrWhiteSpace(txt_GiaTri.Text) ||
+                string.IsNullOrWhiteSpace(txt_HanSuDung.Text))
+            {
+                MessageBox.Show("Thiếu thông tin", "Lỗi...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!NumbersOnly.IsMatch(txt_GiaTri.Text) || !NumbersOnly.IsMatch(txt_GiaTri.Text))
+            {
+                MessageBox.Show("Chỉ được điền số vào trường giá trị", "Lỗi...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var vc = new Voucher();
             vc.MaVoucher = txt_maVoucher.Text;
             vc.LoaiVoucher = txt_loaiVoucher.Text;
             vc.GiaTri = int.Parse(txt_GiaTri.Text);
             vc.HanSuDung = DateTime.Parse(txt_HanSuDung.Text);
-            var option = MessageBox.Show("Xác nhận muốn thêm vcách hàng?", "Xác nhận", MessageBoxButtons.YesNo);
+            var option = MessageBox.Show("Xác nhận muốn thêm voucher?", "Xác nhận", MessageBoxButtons.YesNo);
             if (option == DialogResult.Yes)
             {
                 MessageBox.Show(_services.Add(vc));
@@ -90,12 +109,35 @@ namespace PRL.User_Interfaces
             }
             var obj = _listVc[index];
             _IDwhenclick = obj.MaVoucher;
-            txt_maVoucher.Text = obj.MaVoucher;
+            txt_maVoucher.Text = obj.MaVoucher.TrimEnd();
             txt_loaiVoucher.Text = obj.LoaiVoucher;
             txt_GiaTri.Text = obj.GiaTri.ToString();
-            txt_HanSuDung.Text = obj.HanSuDung.ToString();
-
+#pragma warning disable
+            txt_HanSuDung.Text = DateTime.Parse(obj.HanSuDung.ToString()).ToString("d/M/yyyy").Replace(", ", "/");
+            // sẽ biến dạng ngày thành ngày/tháng/năm. & thay thế dấu phẩy vì nó cứ bị bug trên máy...
+#pragma warning enable
         }
+
+        private void txt_HanSuDung_KeyPress(object sender, KeyPressEventArgs Event)
+        {
+            if (char.IsControl(Event.KeyChar))
+                return;
+
+            if (!DateTime_Filter.IsMatch(txt_HanSuDung.Text.Insert(txt_HanSuDung.SelectionStart, Event.KeyChar.ToString()) + "1"))
+                Event.Handled = true;
+        }
+        // làm hộp chữ HSD chỉ nhập đc ngày tháng năm theo dạng ngày(dd)/tháng(mm)/năm(yyyyy(lên tới 5 chữ số!!!))
+
+
+        private void txt_GiaTri_KeyPress(object sender, KeyPressEventArgs Event)
+        {
+            if (char.IsControl(Event.KeyChar))
+                return;
+
+            if (!NumbersOnly.IsMatch(txt_GiaTri.Text.Insert(txt_GiaTri.SelectionStart, Event.KeyChar.ToString()) + "1"))
+                Event.Handled = true;
+        }
+        // làm hộp chữ giá trị tiền chỉ đc phép nhập số
     }
 
 }

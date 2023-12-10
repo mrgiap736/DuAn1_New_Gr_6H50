@@ -15,7 +15,7 @@ namespace PRL
 {
     public partial class TheThanhVien : Form
     {
-        Regex NumbersOnly = new Regex(@"\d+$");
+        Regex NumbersOnly = new Regex(@"[0-9]*$");
         Regex ASCIIOnly = new Regex(@"[A-Za-z0-9]+$");
         Regex DateTime_Filter = new Regex(@"^(\d{0,2}[/]?\d{1,2})?[/]?\d{1,6}$"); // (dd/mm/yyyy(y))
         Regex DateTime_Checker = new Regex(@"^\d{1,2}/\d{1,2}/\d{4,5}");
@@ -54,7 +54,15 @@ namespace PRL
             TTVMoi.NgayHieuLuc = DateTime.Parse(Txt_Available.Text);
             TTVMoi.NgayHetHan = DateTime.Parse(Txt_DieDate.Text);
             TTVMoi.DiemThanhVien = int.Parse(Txt_Points.Text);
-            Svc_TheThanhVien.Them_Moi(TTVMoi);
+            try
+            {
+                Svc_TheThanhVien.Them_Moi(TTVMoi);
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException)
+            {
+                MessageBox.Show($"Không tạo được thẻ KH, không thể tìm thấy SĐT {Txt_Phone.Text}!", "...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             MessageBox.Show("Thêm thành công", "DONEZO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             GetServiceList();
             ResetAll();
@@ -105,6 +113,15 @@ namespace PRL
                 return;
 
             if (!DateTime_Filter.IsMatch(Txt_DieDate.Text.Insert(Txt_DieDate.SelectionStart, e.KeyChar.ToString()) + "1"))
+                e.Handled = true;
+        }
+
+        private void Txt_Points_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+                return;
+
+            if (!NumbersOnly.IsMatch(Txt_Points.Text.Insert(Txt_Points.SelectionStart, e.KeyChar.ToString()) + "1"))
                 e.Handled = true;
         }
 
@@ -160,7 +177,7 @@ namespace PRL
         }
 
         private void BTN_Delete_Click(object sender, EventArgs e)
-        { 
+        {
             var TTVXoa = new DAL.DomainClass.TheThanhVien();
             TTVXoa.SdtkhachHang = Txt_Phone.Text;
             TTVXoa.LoaiThanhVien = Combo_Tier.Text;

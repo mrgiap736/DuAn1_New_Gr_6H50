@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhachHang));
             dtgview = new DataGridView();
             txtSDT = new TextBox();
             pictureBox2 = new PictureBox();
@@ -58,12 +59,12 @@
             // 
             dtgview.BackgroundColor = SystemColors.ButtonHighlight;
             dtgview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgview.Location = new Point(15, 101);
+            dtgview.Location = new Point(13, 79);
             dtgview.Margin = new Padding(2);
             dtgview.Name = "dtgview";
             dtgview.RowHeadersWidth = 62;
             dtgview.RowTemplate.Height = 33;
-            dtgview.Size = new Size(891, 252);
+            dtgview.Size = new Size(780, 357);
             dtgview.TabIndex = 89;
             dtgview.CellClick += dtgview_CellClick;
             // 
@@ -73,29 +74,29 @@
             txtSDT.BorderStyle = BorderStyle.None;
             txtSDT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtSDT.ForeColor = Color.Black;
-            txtSDT.Location = new Point(377, 578);
-            txtSDT.Margin = new Padding(3, 4, 3, 4);
+            txtSDT.Location = new Point(344, 538);
             txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(282, 27);
+            txtSDT.Size = new Size(240, 22);
             txtSDT.TabIndex = 65;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(377, 576);
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(340, 536);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(282, 33);
+            pictureBox2.Size = new Size(247, 26);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 64;
             pictureBox2.TabStop = false;
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(377, 576);
+            textBox8.Location = new Point(340, 536);
             textBox8.Margin = new Padding(3, 2, 3, 2);
             textBox8.Multiline = true;
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(282, 31);
+            textBox8.Size = new Size(247, 26);
             textBox8.TabIndex = 63;
             // 
             // txtDiachi
@@ -104,29 +105,29 @@
             txtDiachi.BorderStyle = BorderStyle.None;
             txtDiachi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtDiachi.ForeColor = Color.Black;
-            txtDiachi.Location = new Point(377, 523);
-            txtDiachi.Margin = new Padding(3, 4, 3, 4);
+            txtDiachi.Location = new Point(344, 509);
             txtDiachi.Name = "txtDiachi";
-            txtDiachi.Size = new Size(282, 27);
+            txtDiachi.Size = new Size(240, 22);
             txtDiachi.TabIndex = 84;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(377, 521);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(340, 507);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(282, 33);
+            pictureBox1.Size = new Size(247, 26);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 83;
             pictureBox1.TabStop = false;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(377, 521);
+            textBox5.Location = new Point(340, 507);
             textBox5.Margin = new Padding(3, 2, 3, 2);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(282, 31);
+            textBox5.Size = new Size(247, 26);
             textBox5.TabIndex = 82;
             // 
             // txtTen
@@ -135,39 +136,39 @@
             txtTen.BorderStyle = BorderStyle.None;
             txtTen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtTen.ForeColor = Color.Black;
-            txtTen.Location = new Point(377, 467);
-            txtTen.Margin = new Padding(3, 4, 3, 4);
+            txtTen.Location = new Point(344, 480);
             txtTen.Name = "txtTen";
-            txtTen.Size = new Size(282, 27);
+            txtTen.Size = new Size(240, 22);
             txtTen.TabIndex = 65;
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(377, 465);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(340, 478);
             pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(282, 33);
+            pictureBox4.Size = new Size(247, 26);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 64;
             pictureBox4.TabStop = false;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(377, 465);
+            textBox2.Location = new Point(340, 478);
             textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(282, 31);
+            textBox2.Size = new Size(247, 26);
             textBox2.TabIndex = 63;
             // 
             // btnThem
             // 
             btnThem.BackColor = Color.FromArgb(112, 88, 61);
             btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(288, 358);
+            btnThem.Location = new Point(173, 440);
             btnThem.Margin = new Padding(3, 2, 3, 2);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(145, 42);
+            btnThem.Size = new Size(127, 34);
             btnThem.TabIndex = 73;
             btnThem.Text = "Thêm KH";
             btnThem.UseVisualStyleBackColor = false;
@@ -177,10 +178,10 @@
             // 
             btnSua.BackColor = Color.FromArgb(112, 88, 61);
             btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(468, 358);
+            btnSua.Location = new Point(331, 440);
             btnSua.Margin = new Padding(3, 2, 3, 2);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(145, 42);
+            btnSua.Size = new Size(127, 34);
             btnSua.TabIndex = 73;
             btnSua.Text = "Sửa Thông Tin KH";
             btnSua.UseVisualStyleBackColor = false;
@@ -190,10 +191,10 @@
             // 
             btnXoa.BackColor = Color.FromArgb(112, 88, 61);
             btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(648, 358);
+            btnXoa.Location = new Point(488, 440);
             btnXoa.Margin = new Padding(3, 2, 3, 2);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(145, 42);
+            btnXoa.Size = new Size(127, 34);
             btnXoa.TabIndex = 74;
             btnXoa.Text = "Xóa KH";
             btnXoa.UseVisualStyleBackColor = false;
@@ -204,52 +205,52 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(169, 574);
+            label2.Location = new Point(206, 536);
             label2.Name = "label2";
-            label2.Size = new Size(168, 32);
+            label2.Size = new Size(127, 25);
             label2.TabIndex = 68;
-            label2.Text = "Số điện thoại :";
+            label2.Text = "Số điện thoại:";
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label13.ForeColor = Color.White;
-            label13.Location = new Point(169, 518);
+            label13.Location = new Point(259, 509);
             label13.Name = "label13";
-            label13.Size = new Size(106, 32);
+            label13.Size = new Size(74, 25);
             label13.TabIndex = 71;
-            label13.Text = "Địa chỉ : ";
+            label13.Text = "Địa chỉ:";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(169, 462);
+            label7.Location = new Point(186, 480);
             label7.Name = "label7";
-            label7.Size = new Size(195, 32);
+            label7.Size = new Size(148, 25);
             label7.TabIndex = 72;
-            label7.Text = "Tên khách hàng :";
+            label7.Text = "Tên khách hàng:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(3, 18);
+            label3.Location = new Point(3, 14);
             label3.Name = "label3";
-            label3.Size = new Size(143, 32);
+            label3.Size = new Size(114, 25);
             label3.TabIndex = 61;
             label3.Text = "Khách Hàng";
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(15, 63);
+            txtSearch.Location = new Point(13, 50);
             txtSearch.Margin = new Padding(3, 2, 3, 2);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Mời nhập Tên / SĐT khách hàng cần tìm? ";
-            txtSearch.Size = new Size(284, 27);
+            txtSearch.Size = new Size(249, 23);
             txtSearch.TabIndex = 0;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
@@ -276,16 +277,17 @@
             Panel_khachHang.Location = new Point(2, 1);
             Panel_khachHang.Margin = new Padding(3, 2, 3, 2);
             Panel_khachHang.Name = "Panel_khachHang";
-            Panel_khachHang.Size = new Size(923, 940);
+            Panel_khachHang.Size = new Size(808, 752);
             Panel_khachHang.TabIndex = 1;
             // 
             // KhachHang
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Firebrick;
-            ClientSize = new Size(926, 714);
+            ClientSize = new Size(810, 571);
             Controls.Add(Panel_khachHang);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "KhachHang";
             Text = "KhachHang";
             Load += KhachHang_Load;
