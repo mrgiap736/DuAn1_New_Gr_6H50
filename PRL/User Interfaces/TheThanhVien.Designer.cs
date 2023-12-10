@@ -106,6 +106,7 @@
             Txt_Points.Name = "Txt_Points";
             Txt_Points.Size = new Size(239, 22);
             Txt_Points.TabIndex = 5;
+            Txt_Points.KeyPress += Txt_Points_KeyPress;
             // 
             // pictureBox2
             // 
@@ -133,7 +134,7 @@
             // 
             // BTN_Reset
             // 
-            BTN_Reset.BackColor = Color.Transparent;
+            BTN_Reset.BackColor = Color.FromArgb(112, 88, 61);
             BTN_Reset.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BTN_Reset.ForeColor = Color.White;
             BTN_Reset.Location = new Point(539, 533);
@@ -142,6 +143,7 @@
             BTN_Reset.TabIndex = 9;
             BTN_Reset.Text = "Đặt lại";
             BTN_Reset.UseVisualStyleBackColor = false;
+            BTN_Reset.Click += BTN_Reset_Click;
             // 
             // Txt_DieDate
             // 
@@ -213,7 +215,7 @@
             // 
             // BTN_CreateNew
             // 
-            BTN_CreateNew.BackColor = Color.Transparent;
+            BTN_CreateNew.BackColor = Color.FromArgb(112, 88, 61);
             BTN_CreateNew.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BTN_CreateNew.ForeColor = Color.White;
             BTN_CreateNew.Location = new Point(539, 416);
@@ -226,7 +228,7 @@
             // 
             // BTN_Delete
             // 
-            BTN_Delete.BackColor = Color.Transparent;
+            BTN_Delete.BackColor = Color.FromArgb(112, 88, 61);
             BTN_Delete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BTN_Delete.ForeColor = Color.White;
             BTN_Delete.Location = new Point(539, 494);
@@ -239,7 +241,7 @@
             // 
             // BTN_Update
             // 
-            BTN_Update.BackColor = Color.Transparent;
+            BTN_Update.BackColor = Color.FromArgb(112, 88, 61);
             BTN_Update.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BTN_Update.ForeColor = Color.White;
             BTN_Update.Location = new Point(539, 455);

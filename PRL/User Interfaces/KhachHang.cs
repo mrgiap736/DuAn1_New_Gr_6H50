@@ -43,15 +43,30 @@ namespace PRL.User_Interfaces
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtSDT.Text) ||
+                string.IsNullOrWhiteSpace(txtTen.Text) ||
+                string.IsNullOrWhiteSpace(txtDiachi.Text))
+            {
+                MessageBox.Show("Thiếu thông tin", "ÈÈÈÈÈÈÈ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var kh = new DAL.DomainClass.KhachHang();
             kh.TenKhachHang = txtTen.Text;
             kh.DiaChi = txtDiachi.Text;
             kh.SdtkhachHang = txtSDT.Text;
 
-            var option = MessageBox.Show("Xác nhận muốn thêm khách hàng?", "Xác nhận", MessageBoxButtons.YesNo);
+            var option = MessageBox.Show("Xác nhận muốn thêm khách hàng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (option == DialogResult.Yes)
             {
-                MessageBox.Show(_service.Add(kh));
+                try
+                {
+                    MessageBox.Show(_service.Add(kh));
+                }
+                catch (InvalidOperationException)
+                {
+                    MessageBox.Show("Không thể thêm khách hàng. Không thể có SĐT trùng nhau.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 LoadGird(null);
             }
             else
@@ -62,10 +77,17 @@ namespace PRL.User_Interfaces
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtSDT.Text) ||
+                string.IsNullOrWhiteSpace(txtTen.Text) ||
+                string.IsNullOrWhiteSpace(txtDiachi.Text))
+            {
+                MessageBox.Show("Bạn chưa chọn mục tiêu cần xóa, hoặc là thiếu thông tin!", "ÈÈÈÈÈÈÈ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var kh = new DAL.DomainClass.KhachHang();
 
             kh.SdtkhachHang = _IDwhenclick;
-            var option = MessageBox.Show("Xác nhận muốn Xoá khách hàng?", "Xác nhận", MessageBoxButtons.YesNo);
+            var option = MessageBox.Show("Xác nhận muốn Xoá khách hàng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (option == DialogResult.Yes)
             {
                 MessageBox.Show(_service.Remove(kh));
@@ -79,10 +101,22 @@ namespace PRL.User_Interfaces
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtSDT.Text) ||
+                string.IsNullOrWhiteSpace(txtTen.Text) ||
+                string.IsNullOrWhiteSpace(txtDiachi.Text))
+            {
+                MessageBox.Show("Thiếu thông tin", "ÈÈÈÈÈÈÈ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var kh = new DAL.DomainClass.KhachHang();
 
-            kh.SdtkhachHang = _IDwhenclick;
-            var option = MessageBox.Show("Xác nhận muốn sửa khách hàng?", "Xác nhận", MessageBoxButtons.YesNo);
+            //kh.SdtkhachHang = _IDwhenclick;
+
+            kh.TenKhachHang = txtTen.Text;
+            kh.DiaChi = txtDiachi.Text;
+            kh.SdtkhachHang = txtSDT.Text;
+            var option = MessageBox.Show("Xác nhận muốn sửa khách hàng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (option == DialogResult.Yes)
             {
                 MessageBox.Show(_service.Update(kh));
