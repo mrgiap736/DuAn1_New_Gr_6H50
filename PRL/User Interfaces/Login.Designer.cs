@@ -82,7 +82,7 @@
             // 
             txtMK.BackColor = Color.FromArgb(217, 217, 217);
             txtMK.Font = new Font("Cascadia Mono SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            txtMK.ForeColor = SystemColors.Control;
+            txtMK.ForeColor = Color.Black;
             txtMK.Location = new Point(50, 154);
             txtMK.Margin = new Padding(4, 3, 4, 3);
             txtMK.Name = "txtMK";
@@ -106,7 +106,7 @@
             // 
             txtTK.BackColor = Color.FromArgb(217, 217, 217);
             txtTK.Font = new Font("Cascadia Mono SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            txtTK.ForeColor = SystemColors.Control;
+            txtTK.ForeColor = Color.Black;
             txtTK.Location = new Point(50, 87);
             txtTK.Margin = new Padding(4, 3, 4, 3);
             txtTK.Name = "txtTK";

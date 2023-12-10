@@ -54,7 +54,15 @@ namespace PRL
             TTVMoi.NgayHieuLuc = DateTime.Parse(Txt_Available.Text);
             TTVMoi.NgayHetHan = DateTime.Parse(Txt_DieDate.Text);
             TTVMoi.DiemThanhVien = int.Parse(Txt_Points.Text);
-            Svc_TheThanhVien.Them_Moi(TTVMoi);
+            try
+            {
+                Svc_TheThanhVien.Them_Moi(TTVMoi);
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException)
+            {
+                MessageBox.Show($"Không tạo được thẻ KH, không thể tìm thấy SĐT {Txt_Phone.Text}!", "...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             MessageBox.Show("Thêm thành công", "DONEZO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             GetServiceList();
             ResetAll();
