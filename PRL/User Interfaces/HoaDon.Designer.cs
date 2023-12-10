@@ -933,6 +933,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "HoaDon";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HoaDon";
             Load += HoaDon_Load;
             panel_DangXuat.ResumeLayout(false);

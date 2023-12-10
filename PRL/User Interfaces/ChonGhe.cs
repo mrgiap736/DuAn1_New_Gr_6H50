@@ -17,6 +17,11 @@ namespace PRL.User_Interfaces
     {
         PhimServices psv = new PhimServices();
         public DAL.DomainClass.Phim phimif { get; set; }
+
+        //
+        string maghe; //lấy mã ghế để tạo vé
+        bool checkChonGhe = false;
+        //
         public ChonGhe(DAL.DomainClass.Phim phimif)
         {
             this.phimif = phimif;
@@ -69,6 +74,12 @@ namespace PRL.User_Interfaces
                 label3.ForeColor = Color.White;
                 label3.Text = "Thời lượng: " + phimif.ThoiLuong.ToString();
 
+                Label label6 = new Label();
+                label6.AutoSize = true;
+                label6.Font = customFont2;
+                label6.ForeColor = Color.White;
+                label6.Text = "Thể loại: " + phimif.MaTheLoaiNavigation.TenTheLoai.ToString();
+
                 Label label4 = new Label();
                 label4.AutoSize = true;
                 label4.Font = customFont2;
@@ -79,12 +90,13 @@ namespace PRL.User_Interfaces
                 label5.AutoSize = true;
                 label5.Font = customFont2;
                 label5.ForeColor = Color.White;
-                label5.Text = "Rạp: (chưa có)";
+                label5.Text = "Rạp: 1";
 
                 // Add Labels to TableLayoutPanel
                 table_LPanel.Controls.Add(label1);
                 table_LPanel.Controls.Add(label2);
                 table_LPanel.Controls.Add(label3);
+                table_LPanel.Controls.Add(label6);
                 table_LPanel.Controls.Add(label4);
                 table_LPanel.Controls.Add(label5);
                 table_LPanel.Padding = new Padding(5, 12, 5, 5);
@@ -127,10 +139,12 @@ namespace PRL.User_Interfaces
                     button.Text = seat.MaGhe.ToString();
                     button.Name = $"btnSeat_{seat.MaGhe}"; // Mã hóa tên button để có thể xác định ghế tương ứng
                     button.ForeColor = Color.White;
-                    if (seat.TrangThai == "Hết")
+                    if (seat.TrangThai.Equals("Hết"))
                     {
                         button.BackColor = Color.FromArgb(152, 37, 29);
+                        button.Enabled = false;
                     }
+
                     //button.Click += SeatButton_Click; // Đặt sự kiện click cho button
                     button.MouseClick += SeatButton_MouserDown;
                     // Lưu màu ban đầu của button
@@ -139,10 +153,7 @@ namespace PRL.User_Interfaces
             }
         }
 
-        //
-        string maghe; //lấy mã ghế để tạo vé
-        bool checkChonGhe = false;
-        //
+      
         private void SeatButton_MouserDown(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
@@ -159,7 +170,7 @@ namespace PRL.User_Interfaces
             // Lưu lại ghế được chọn
             selectedSeat = clickedButton;
 
-            maghe = clickedButton.Text.Substring("btnSeat_".Length);
+            maghe = clickedButton.Text;
             checkChonGhe = true;
         }
 
@@ -167,7 +178,7 @@ namespace PRL.User_Interfaces
         {
             if(checkChonGhe)
             {
-                TaoVe tv = new TaoVe(maghe);
+                TaoVe tv = new TaoVe(maghe, phimif.MaPhim);
 
                 Panel pn = tv.taoVe();
 
