@@ -46,6 +46,7 @@ namespace PRL.User_Interfaces
 
         public void LoadPhim()
         {
+            int stt = 1;
             foreach (var item in psv.GetAllPhim())
             {
                 GroupBox groupBox = new GroupBox();
@@ -59,8 +60,10 @@ namespace PRL.User_Interfaces
 
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Size = new Size(200, 300);
+                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
-                string duongDanAnh = $"PRL/Resources/anhphim.png";
+                string duongDanAnh = $@"C:\Users\TIEN GIAP\source\repos\DuAn1_New_Gr_6H50\PRL\Resources\anhp{stt}.jpg";
+                stt++;
                 if (File.Exists(duongDanAnh))
                 {
                     // Tạo đối tượng Image từ đường dẫn ảnh
@@ -71,7 +74,7 @@ namespace PRL.User_Interfaces
                 }
                 else
                 {
-                    MessageBox.Show($"Không tìm thấy ảnh trong thư mục Resources.");
+                    
                 }
 
                 pictureBox.Location = new Point(10, 20);
